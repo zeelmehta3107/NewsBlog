@@ -1,0 +1,28 @@
+{% extends 'index.html' %} {% block content %}
+
+<h2 class="text-center m-3">{{title| upper}}</h2>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="card-group">
+      {% for value in indata.data %}
+      <div class="col-md-4 main-box">
+        <div class="card" style="margin: 2rem, height=50rem">
+          <img
+            class="card-img-top img-fluid"
+            src="{{ value.imageUrl }}"
+            style="height: 25rem"
+          />
+          <div class="card-body bodysize">
+            <h5 class="card-title">{{ value.title }}</h5>
+            <p class="card-text text-justify">{{ value.content }}</p>
+            <p class="card-text">{{ value.date }}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% endblock content %}

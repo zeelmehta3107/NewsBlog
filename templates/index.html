@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>News App</title>
+    <style>
+        .main-box{
+            padding-bottom: 10px;
+        }
+        
+    </style>
+  </head>
+  <body>
+    <div class="jumbotron text-center m-0">
+      <h1 style="display: inline">News App</h1>
+      <small> (Fetch From API) </small>
+    </div>
+
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark mb-5">
+        <a class="navbar-brand" href="#"></a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav m-auto ">
+                <li class="nav-item pl-3">
+                    <a class="nav-link" href=" {% url 'All_News' %} ">All</a>
+                </li>
+                <li class="nav-item pl-3">
+                    <a class="nav-link" href=" {% url 'National' %} ">National</a>
+                </li>
+                <li class="nav-item pl-3">
+                    <a class="nav-link" href=" {% url 'Business' %} ">Business</a>
+                </li>
+                <li class="nav-item pl-3">
+                    <a class="nav-link" href=" {% url 'Sports' %} ">Sports</a>
+                </li>
+                <li class="nav-item pl-3">
+                    <a class="nav-link" href=" {% url 'World' %} ">World</a>
+                </li>
+                <li class="nav-item pl-3">
+                    <a class="nav-link" href=" {% url 'Politics' %} ">Politics</a>
+                </li>
+                <li class="nav-item pl-3">
+                    <a class="nav-link" href=" {% url 'Technology' %} ">Technology</a>
+                </li>
+                <li class="nav-item pl-3">
+                    <a class="nav-link" href=" {% url 'Startup' %} ">Startup</a>
+                </li>
+                <li class="nav-item pl-3">
+                    <a class="nav-link" href=" {% url 'Entertainment' %} ">Entertainment</a>
+                </li>
+                <li class="nav-item pl-3">
+                    <a class="nav-link" href=" {% url 'Miscellaneous' %} ">Miscellaneous</a>
+                </li>
+                <li class="nav-item pl-3">
+                    <a class="nav-link" href=" {% url 'Unconventional' %} ">Unconventional</a>
+                </li>
+                <li class="nav-item pl-3">
+                    <a class="nav-link" href=" {% url 'Science' %} ">Science</a>
+                </li>
+                <li class="nav-item pl-3">
+                    <a class="nav-link" href=" {% url 'Automobile' %} ">Automobile</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div>
+        {% block content %}
+        <h1 class="text-center mt-10">Welcome to Our Website</h1>
+        <div class="text-center"><small>Please Choose from Above Category</small></div>
+        {% endblock content %}
+    </div>
+
+  </body>
+</html>
